@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <header class="header container">
+      <div class="header-logo gradient">
+        <h1 class="gradient">Encriptador</h1>
+      </div>
+    </header>
+    <main class="container">
+      <div class="main">
+        <div class="encrypt">
+          <div class="encrypt-text">
+            <form>
+              <textarea name="" id="encrypt-text" autofocus
+                placeholder="Digite seu texto..."></textarea>
+            </form>
+
+          </div>
+          <div class="click-area">
+            <div class="warning-area">
+              <img src="assets/images/exclamation-icon.png" alt="exclamacao">
+              <p>Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="buttons">
+              <button class="button btn-encrypt"
+                onclick="encrypt(this)">Criptografar</button>
+              <button class="button btn-decrypt"
+                onclick="decrypt(this)">Descriptografar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="decrypt">
+          <div class="not-find">
+            <img src="./assets/images/boneco.svg" alt="boneco com lupa">
+            <h3>Nenhuma mensagem encontrada</h3>
+            <p>Digite um texto que você deseja criptografar ou
+              descriptografar.</p>
+          </div>
+          <div class="encrypted-box">
+            <textarea disabled class="encrypted-text"></textarea>
+            <div>
+              <button class="button btn-copy" onclick="copy()">Copiar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
